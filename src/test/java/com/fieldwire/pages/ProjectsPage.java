@@ -19,6 +19,9 @@ public class ProjectsPage extends BasePage {
     @FindBy(xpath = "(//div[@class='projects-heading']/span)[1]")
     private WebElement projectCount;
 
+    @FindBy(xpath = "(//fw-button[@kind=\"danger\"]/button")
+    private WebElement deleteButton;
+
 
     public ProjectsPage() {
         PageFactory.initElements(Driver.get(), this);
