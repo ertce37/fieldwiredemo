@@ -22,6 +22,10 @@ public class ProjectsPage extends BasePage {
     @FindBy(xpath = "(//input[@name='input']")
     private WebElement deleteProjectName;
 
+    @FindBy(xpath = "(//fw-button[@kind=\"danger\"]/button")
+    private WebElement deleteButton;
+
+
     public ProjectsPage() {
         PageFactory.initElements(Driver.get(), this);
     }
