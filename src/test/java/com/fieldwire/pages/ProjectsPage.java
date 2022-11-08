@@ -46,6 +46,10 @@ public class ProjectsPage extends BasePage {
         return getCount(projectCount);
     }
 
+    public void enterProjectNameList(String projectName) {
+        populateVisableInputFieldWithText(projectNameInput, projectName);
+    }
+
     public void deleteProject(String projectName) {
     }
 }
