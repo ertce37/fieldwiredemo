@@ -46,4 +46,6 @@ public class ProjectsPage extends BasePage {
         return getCount(projectCount);
     }
 
+    public void deleteProject(String projectName) {
+    }
 }
