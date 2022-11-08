@@ -50,4 +50,6 @@ public class ProjectsPage extends BasePage {
         populateVisableInputFieldWithText(projectNameInput, projectName);
     }
 
+    public void deleteProject(String projectName) {
+    }
 }
