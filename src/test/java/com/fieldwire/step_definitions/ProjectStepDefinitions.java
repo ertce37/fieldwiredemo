@@ -13,6 +13,7 @@ public class ProjectStepDefinitions {
 
     ProjectsPage projectsPage = new ProjectsPage();
     int projectCount;
+    String projectName = projectsPage.stringGenerator("project");
 
     @Given("user is on the projects page")
     public void user_is_on_the_projects_page() {
@@ -24,12 +25,11 @@ public class ProjectStepDefinitions {
     @When("User click on new project button")
     public void user_click_on_new_project_button() {
         projectsPage.clickNewProjectButton();
-
     }
 
     @When("User enters a Project name")
     public void user_enters_a_Project_name() {
-        projectsPage.enterProjectName(projectsPage.stringGenerator("project"));
+        projectsPage.enterProjectName(projectName);
     }
 
     @When("clicks Create button")
@@ -43,6 +43,7 @@ public class ProjectStepDefinitions {
         BrowserUtils.wait(2);
         Driver.get().get(ConfigurationReader.getProperty("projectPageUrl"));
         Assert.assertEquals(projectCount + 1, projectsPage.getProjectCount());
+        projectsPage.deleteProject(projectName);
 
 
     }
